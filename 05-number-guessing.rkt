@@ -2,7 +2,6 @@
 
 (require 2htdp/universe 2htdp/image)
 
-(struct interval (small big))
 (define WIDTH 600)
 (define HEIGHT 600)
 (define TEXT-SIZE 18)
@@ -11,6 +10,8 @@
 (define TEXT-LOWER-Y 550)
 (define COLOR "red")
 (define SIZE 42)
+
+(struct interval (small big) #:transparent)
 
 (define HELP-TEXT
   (text "↑ for larger numbers, ↓ for smaller ones"
