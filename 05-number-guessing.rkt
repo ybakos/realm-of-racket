@@ -37,3 +37,15 @@
         [(key=? key "q") (stop-with w)]
         [(key=? key "=") (stop-with w)]
         [else w]))
+
+(define (smaller w)
+  (interval (interval-small w)
+            (max (interval-small w) (sub1 (guess w)))))
+
+(define (bigger w)
+  (interval (min (interval-big w) (add1 (guess w)))
+            (interval-big w)))
+
+(define (guess w)
+  (quotient (+ (interval-small w) (interval-big w)) 2))
+
