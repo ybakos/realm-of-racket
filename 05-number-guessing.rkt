@@ -12,7 +12,7 @@
 (define COLOR "red")
 
 (define HELP-TEXT
-  (text "up for larger numbers, down for smaller ones"
+  (text "↑ for larger numbers, ↓ for smaller ones"
         TEXT-SIZE
         "blue"))
 (define HELP-TEXT2
