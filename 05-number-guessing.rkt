@@ -25,3 +25,9 @@
                      (place-image/align HELP-TEXT2 TEXT-X TEXT-LOWER-Y "left" "bottom"
                                         (empty-scene WIDTH HEIGHT))))
 
+(define (start lower upper)
+  (big-bang (interval lower upper)
+    (on-key deal-with-guess)
+    (to-draw render)
+    (stop-when single? render-last-scene)))
+
