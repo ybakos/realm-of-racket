@@ -31,3 +31,9 @@
     (to-draw render)
     (stop-when single? render-last-scene)))
 
+(define (deal-with-guess w key)
+  (cond [(key=? key "up") (bigger w)]
+        [(key=? key "down") (smaller w)]
+        [(key=? key "q") (stop-with w)]
+        [(key=? key "=") (stop-with w)]
+        [else w]))
