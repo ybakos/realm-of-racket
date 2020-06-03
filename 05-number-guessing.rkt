@@ -7,8 +7,8 @@
 (define HEIGHT 600)
 (define TEXT-SIZE 18)
 (define TEXT-X 10)
-(define TEXT-UPPER-Y 10)
-(define TEXT-LOWER-Y 10)
+(define TEXT-UPPER-Y 50)
+(define TEXT-LOWER-Y 550)
 (define COLOR "red")
 (define SIZE 42)
 
@@ -55,3 +55,8 @@
 
 (define (render-last-scene w)
   (overlay (text "End" SIZE COLOR) MT-SC))
+
+(define (single? w)
+  (= (interval-small w) (interval-big w)))
+
+(start 100 200)
