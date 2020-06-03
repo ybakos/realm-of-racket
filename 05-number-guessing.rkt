@@ -10,6 +10,7 @@
 (define TEXT-UPPER-Y 10)
 (define TEXT-LOWER-Y 10)
 (define COLOR "red")
+(define SIZE 42)
 
 (define HELP-TEXT
   (text "↑ for larger numbers, ↓ for smaller ones"
@@ -49,3 +50,8 @@
 (define (guess w)
   (quotient (+ (interval-small w) (interval-big w)) 2))
 
+(define (render w)
+  (overlay (text (number->string (guess w)) SIZE COLOR) MT-SC))
+
+(define (render-last-scene w)
+  (overlay (text "End" SIZE COLOR) MT-SC))
